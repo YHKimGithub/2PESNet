@@ -10,14 +10,14 @@ Young Hwi Kim, Seonghyeon Nam, Seon Joo Kim
 
 ### Prerequisites
 - Ubuntu 16.04  
-- Python 2.7.12   
-- CUDA 10.0  
+- Python 3.8.8   
+- CUDA 11.0  
 
 ### Requirements
-- pytorch==1.4.0  
-- numpy==1.16.2
-- h5py==2.9.0
-- tensorboardX==2.1
+- pytorch==1.8.1  
+- numpy==1.19.2
+- h5py==3.6.0
+- tensorboardX==2.5.1
 
 
 
@@ -69,8 +69,8 @@ python main.py --mode=test --pptype=nms
 
 | Method | 0.3 | 0.4 | 0.5 | 0.6 | 0.7 |
 |:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:| 
-| 2PESNet (T=0) | 44.8 | 36.9 | 29.0 | 20.6 | 13.6 |
-| 2PESNet (T=2) | 47.3 | 39.3 | 30.5 | 21.7 | 14.2 |
+| 2PESNet (T=0) | 44.5 | 37.2 | 29.1 | 19.8 | 11.9 |
+| 2PESNet (T=2) | 48.0 | 39.9 | 31.8 | 22.1 | 14.4 |
 
 
 

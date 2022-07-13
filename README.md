@@ -1,7 +1,7 @@
 # 2PESNet: Towards online processing of temporal action localization 
 **2PESNet: Towards online processing of temporal action localization** (Pattern Recognition)   
 Young Hwi Kim, Seonghyeon Nam, Seon Joo Kim   
-[[`link`]()]   
+[[`link`](https://doi.org/10.1016/j.patcog.2022.108871)]   
 
 ## Updates
 **17 Jul, 2022**: Initial release

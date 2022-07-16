@@ -9,52 +9,53 @@ Young Hwi Kim, Seonghyeon Nam, Seon Joo Kim
 ## Installation
 
 ### Prerequisites
-- Ubuntu 16.04  
-- Python 3.8.8   
-- CUDA 11.0  
+- Ubuntu 18.04  
+- Python 2.7.12   
+- CUDA 10.0  
 
 ### Requirements
-- pytorch==1.8.1  
-- numpy==1.19.2
-- h5py==3.6.0
-- tensorboardX==2.5.1
+- pytorch==1.4.0  
+- numpy==1.16.2
+- h5py==2.9.0
+- tensorboardX==2.1
 
 
 
 ## Training
 
 ### Input Features
-We provide the Kinetics pre-trained feature of THUMOS'14 dataset.
-The extracted features can be downloaded from [link will be added soon].   
-Files should be located in 'data/'.  
-You can also get the feature files from [here](https://github.com/wangxiang1230/OadTR).
+We provide the Kinetics pre-trained feature of THUMOS'14 dataset. The extracted features can be downloaded from [here](https://drive.google.com/file/d/1GwQjMq0Eyc3XWljeeaSqwbTal5y76Xwy/view?usp=sharing).  
+Files should be located in 'data/'.   
 
 ### Trained Model
 The trained models that used Kinetics pre-trained feature can be downloaded from [link will be added soon].    
-Files should be located in 'checkpoints/'. 
+Files should be located in 'checkpoint/'. 
 
 ### Training Model by own
-To train the main OAT model, execute the command below.
+Training multi-head detector (MHD) 
 ```
-python main.py --mode=train
+python main.py --module=mhd --mode=train
 ```
-To train the post-processing network (OSN), execute the commands below.
+Training end detection refinement (EDR)
 ```
-python supnet.py --mode=make --inference_subset=train
-python supnet.py --mode=make --inference_subset=test
-python supnet.py --mode=train
+python main.py --module=mhd --mode=data_gen
+python main.py --module=edr --mode=train
+```
+Training action start detection (ASD)
+```
+python main.py --module=asd --mode=train
 ```
 
 
 ## Testing
-To test OAT-OSN, execute the command below.
+Testing online performance of 2PESNet.
 ```
-python main.py --mode=test
+python main.py --module=asd --mode=test 
 ```
 
-To test OAT-NMS, execute the command below.
+Testing online performance of 2PESNet with temporal tolerance.
 ```
-python main.py --mode=test --pptype=nms
+python main.py --module=asd --mode=test --allowed_delay=2
 ```
 
 ## Paper Results
@@ -69,7 +70,7 @@ python main.py --mode=test --pptype=nms
 
 | Method | 0.3 | 0.4 | 0.5 | 0.6 | 0.7 |
 |:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:| 
-| 2PESNet (T=0) | 44.5 | 37.2 | 29.1 | 19.8 | 11.9 |
+| 2PESNet (T=0) | 45.0 | 38.6 | 29.4 | 21.1 | 13.4 |
 | 2PESNet (T=2) | 48.0 | 39.9 | 31.8 | 22.1 | 14.4 |
 
 

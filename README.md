@@ -28,7 +28,7 @@ We provide the Kinetics pre-trained feature of THUMOS'14 dataset. The extracted 
 Files should be located in 'data/'.   
 
 ### Trained Model
-The trained models that used Kinetics pre-trained feature can be downloaded from [link will be added soon].    
+The trained models that used Kinetics pre-trained feature can be downloaded from [here](https://drive.google.com/file/d/1GTx3G57lVxh4DIXCjiA41HQMkjZVVPaN/view?usp=sharing).    
 Files should be located in 'checkpoint/'. 
 
 ### Training Model by own

@@ -28,23 +28,23 @@ def parse_opt():
     parser.add_argument(
         '--video_anno',
         type=str,
-        default="/data/thumos14_v2.json")        
+        default="./data/thumos14_v2.json")        
     parser.add_argument(
         '--video_feature_rgb_train',
         type=str,
-        default="/data/rgb_feature_valid_interval5.h5")
+        default="./data/rgb_feature_valid_interval5.h5")
     parser.add_argument(
         '--video_feature_flow_train',
         type=str,
-        default="/data/flow_feature_valid_interval5.h5")    
+        default="./data/flow_feature_valid_interval5.h5")    
     parser.add_argument(
         '--video_feature_rgb_test',
         type=str,
-        default="/data/rgb_feature_test_interval5.h5")
+        default="./data/rgb_feature_test_interval5.h5")
     parser.add_argument(
         '--video_feature_flow_test',
         type=str,
-        default="/data/flow_feature_test_interval5.h5")
+        default="./data/flow_feature_test_interval5.h5")
     parser.add_argument(
         '--temporal_interval',
         type=int,

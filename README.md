@@ -67,6 +67,7 @@ python main.py --module=asd --mode=test --allowed_delay=2
 
 
 ## Updated Results
+By the minor bug fix, we report the updated results.
 
 | Method | 0.3 | 0.4 | 0.5 | 0.6 | 0.7 |
 |:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:| 
